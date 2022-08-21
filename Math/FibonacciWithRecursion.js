@@ -1,4 +1,0 @@
-/*
-Fibonacci sequence using recursion
-
-*/
