@@ -1,0 +1,12 @@
+/*
+
+Linear search
+
+
+Binary Search
+
+
+Recursive binary search
+
+
+*/

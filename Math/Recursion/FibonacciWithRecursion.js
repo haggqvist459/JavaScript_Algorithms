@@ -21,7 +21,7 @@ F1 = 1
 Note: 
 For finding the Nth element in Fibonacci, iterative is far more optimal than recursive.
     - So looking for an element in an array, iterative is more optimal than recursive. 
-    
+
 */
 
 
@@ -35,7 +35,7 @@ function recursiveFibonacci(n) {
     return recursiveFibonacci(n-1) + recursiveFibonacci(n-2)
 
 }
-
+// Big-O = O(2^n) - recursive
 
 console.log(recursiveFibonacci(0)) // 0
 console.log(recursiveFibonacci(1)) // 1
