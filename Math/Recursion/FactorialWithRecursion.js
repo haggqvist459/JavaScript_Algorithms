@@ -15,16 +15,13 @@ factorial(5) = 5*4*3*2*1 = 120
 
 
 function recursiveFactorial(n){
-
-    if(n === 0){
+    if(n === 0) {
         return 1
     }
-
     return n * recursiveFactorial(n-1)
-
 }
 // Big-O = O(n)
 
 console.log(recursiveFactorial(0)) // = 1
 console.log(recursiveFactorial(1)) // = 1
-console.log(recursiveFactorial(9999)) // = 120
+console.log(recursiveFactorial(5)) // = 120

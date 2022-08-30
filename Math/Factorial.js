@@ -13,7 +13,7 @@ function factorial(n){
     for(i = 2; i<=n; i++){
         result = result * i;
     }
-    return result;
+    return result; 
 }
 // Big-O = O(n)
 
