@@ -16,11 +16,12 @@ function towerOfHanoi(n, fromRod, toRod, usingRod){
         console.log('           ')
         return
     }
-    
+
     towerOfHanoi(n-1, fromRod, usingRod, toRod)
     console.log('move disc ' + n + ' from ' + fromRod + ' to ' + toRod);
     console.log('           ')
     towerOfHanoi(n-1, usingRod, toRod, fromRod)
 }
+// Big-O = O(2^n)
 
 towerOfHanoi(4, 'A', 'C', 'B')
