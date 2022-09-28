@@ -23,7 +23,7 @@ Implementation:
     * prepend() - add a node to start of the list
     * append() - add a node at the end of the list
     * insert() - add a node at a given index in the list 
-    * remove() - remove a node from the list
+    * remove() - remove a node at a given index rom the list
     * search() - find an element in the list 
     * print() - print the list
 
@@ -111,7 +111,29 @@ class LinkedList {
 
     }
     
-    remove(){
+    removeFrom(index){
+
+        if (index < 0 || index >= this.size){
+            console.log("error: removeFrom(index) - invalid index")
+            return null 
+        }
+
+        let removedNode 
+
+        if (index === 0){
+            removedNode = this.head 
+            this.head = this.head.next
+        } else 
+        {
+            let prev = this.head
+            for(let i = 0; i < index - 1 ; i++){
+                prev = prev.next
+            }
+            removedNode = prev.next
+            prev.next = removedNode.next
+        }
+        this.size--
+        return removedNode.value
 
     }
 
@@ -153,6 +175,14 @@ list.print()
 list.insert(40, 2)
 list.print()
 console.log('List size: ', list.getSize())
+
+console.log(list.removeFrom(10))
+console.log(list.removeFrom(0))
+list.print()
+
+console.log(list.removeFrom(1))
+list.print()
+console.log(list.getSize())
 // list.prepend(10)
 // list.print()
 
